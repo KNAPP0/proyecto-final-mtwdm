@@ -1,0 +1,26 @@
+[
+    {
+        "codigo": "1",
+        "nombre": "silla",
+        "foto": "",
+        "descripcion": "Esta es una silla"
+    },
+    {
+        "codigo": "2",
+        "nombre": "mesa",
+        "foto": "",
+        "descripcion": "Esta es una mesa"
+    },
+    {
+        "codigo": "3",
+        "nombre": "ventana",
+        "foto": "",
+        "descripcion": "Esta es una ventana"
+    },
+    {
+        "codigo": "4",
+        "nombre": "cocina",
+        "foto": "",
+        "descripcion": "Esta es una cocina"
+    }
+]

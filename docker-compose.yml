@@ -1,0 +1,34 @@
+version: '3'
+services:
+
+    reverse-proxy:
+        image: jwilder/nginx-proxy:alpine
+        container_name: 'Reverse-Proxy'
+        restart: unless-stopped
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - /etc/nginx/vhost.d
+            - /usr/share/nginx/html  
+
+    app-front-end:
+        container_name: 'Angular-App'
+        build:
+            context: ./app-front-end
+            dockerfile: Dockerfile
+        restart: always
+        environment:
+            - VIRTUAL_HOST=app.midominio.com
+
+    node-api:
+        container_name: 'Node-API'
+        build:
+            context: ./node-api
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - '5000:5000'
+        environment:
+            - VIRTUAL_HOST=api.midominio.com

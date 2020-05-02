@@ -1,0 +1,24 @@
+<!-- Esto es un comentario en HTML-->
+<div class="text-center">
+  <div class="btn-group m-3" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Cars']" routerLinkActive="active"  >Autos</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Buses']" routerLinkActive="active" >Camionetas</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Motorcycles']" routerLinkActive="active" >Motocicletas</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Ships']" routerLinkActive="active" >Botes</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Planes']" routerLinkActive="active" >Aviones</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['categories','Trains']" routerLinkActive="active" >Trenes</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+<button class="btn btn-primary" [routerLink]="['/home']">Regresar a Inicio</button>
+<!-- <div class="card-columns m-3">
+  <div class="card" *ngFor="let prod of misdatos">
+    <img src="/assets/images/productos/{{prod.codigo}}.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{prod.categoria}}</h5>
+      <p class="card-text">{{prod.descripcion}}</p>
+      <p class="card-text"><small class="text-muted">{{prod.proveedor}}</small></p>
+    </div>
+  </div>
+</div> -->

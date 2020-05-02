@@ -1,0 +1,18 @@
+<!--<p>product works!</p>
+<p>
+    {{product | json}}
+</p>-->
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img src="assets/images/productos/{{product.codigo}}.jpg" class="img-fluid" alt="...">
+      </div>
+      <div class="col-sm">
+        <p class="card-text">{{product.descripcion}}</p>
+      </div>
+      <div class="col-sm">
+        <p class="card-text"><small class="text-muted">$ {{product.precio | number}}</small></p>
+      </div>
+    </div>
+  </div>
+<button class="btn btn-danger" [routerLink]="[link, param]">Regresar</button>
